@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Build QC">
+	
+	<property name="src.dir" value="${basedir}/../src" />
+	<property name="deploy.dir" value="${basedir}/../deploy" />
+	
+	<target name="createSWC">
+		<!--
+		<echo>Building SWF</echo>
+		<diagnostics/>
+		-->
+		<fdt.launch.library projectname="quancreative" target="${basedir}/quancreative.swc" />
+	</target>
+	
+	<target name="compile">
+		<!--
+		swflauncher : The viewer to be should be used to launch the SWF: 
+						"External SWF Viewer", 
+						"Adobe Flash Player", 
+						"Internal SWF Viewer" 
+						or AIR Debug Launcher. 
+	    <fdt.launch.application 
+	    	projectname="quancreative" 
+	    	mainclass="${src.dir}/com/quancreative/main/Main.as" 
+	    	target="${deploy.dir}/main.swf" 
+	    	startswf="true"
+	    	debug="true" 
+	    	swflauncher="Adobe Flash Player"
+	    />
+	    
+	    <fdt.flashCompile> 
+	      	<fileset dir="${basedir}">
+	        	<include name="*.fla"/>
+	      	</fileset>
+    	</fdt.flashCompile>
+		-->
+    	<fdt.flashCompile file="${src.dir}/main.fla" failonerror="false"/>
+	</target>
+	
+	<target name="browse">
+	  	<fdt.viewDocument location="http://localhost/quancreative/deploy/index.php" />
+	</target>
+	
+	<target name="zip">
+		<zip destfile="${basedir}/deploy.zip" basedir="${basedir}/bin" />
+		<move file="${basedir}/deploy.zip" todir="${basedir}/deploy" />
+	</target>
+	
+	<target name="run.all" depends="compile,browse"></target>
+</project>
