@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /quancreative/deploy/
+	RewriteRule !(\.swf|\.xml|\.gif|\.png|\.jpe?g|\.css|\.js|\.php|^public/.*)$ admin.php [nocase,last]
+	
+</IfModule>
+<IfModule !mod_rewrite.c>
+	# If we don't have mod_rewrite installed, all 404's
+	# can be sent to index.php, and everything works as normal.
+	# Submitted by: ElliotHaughin
+	ErrorDocument 404 /index.php
+</IfModule>

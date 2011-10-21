@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** global ***/
+*{ padding: 0; margin: 0;}
+img, fieldset{ border: 0;}
+body{ background: url(../images/bluepattern-background.gif); font-size: 80%; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal; color: #333333;}
+a{ color: #84ADE7; text-decoration: none; padding-bottom: 1px; border-bottom: 1px dotted #84ADE7; font-weight: bold;}
+a:hover{ color: #34445B; font-weight: bold;}
+
+div#sidebar{position: fixed; left: 0; padding: 1em 0 0 0; color: white; background: url(../images/track_pattern.gif) bottom right repeat-x #000a0f; height: 96%; }
+
+	div#logo{ padding: 1em 0 2em 1em;}
+	div#logo h1 a{ font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 22px; border: 0; color: white;}
+	div#logo p{ font-style: italic; color: #999999;}
+	
+	div#main-nav{ }
+	div#main-nav ul{ list-style: none; border-top: 1px solid #333333; }
+	div#main-nav ul li{border-bottom: 1px solid #333333; }
+	div#main-nav ul li a{ background: #000a0f; padding: .4em 1.6em; display: block; text-decoration: none; font-style: italic; font-size: 140%; font-weight: bold; border: 0;}
+	div#main-nav ul li a:hover{ background:  url(../images/bluepattern-background.gif); color: #000a0f;}
+	
+	div#status{ padding: 3em 1em; font-size: 85%; font-family: Verdana, Helvetica, sans-serif;}
+	div#status h2{ font-size: 120%; font-family: Georgia, "Times New Roman", Times, serif; color: #666666; }
+	
+	address#contact-info{ padding: 3em 1em; line-height: 2em;}
+	
+div#wrapper{margin-left: 240px; }
+
+	div#container { border-top: 8px solid #59739b; width: 46em; }
+	
+		div.page{ padding: 2em; margin-bottom: 6px; border: 1px solid #CCCCCC; clear:both; display: block; background: white; height: 100%; overflow: hidden;}
+		div.page h1 a{ color: #999999; font-size: 100%; font-weight: normal; border: 0; }
+		div.page h1 a:hover{color: #999999; text-decoration: none;}
+		div.page p { font-size: 108%; line-height: 1.45em; padding:.6em 0;}
+		
+		/*** individual page ***/		
+		div#portfolio dt { font-size: 140%; padding-top: 2em; }
+		div#portfolio dd { border-bottom: 1px dotted #CCCCCC; padding-bottom: 1em; }
+		div#portfolio dd img{ display: block; border: 1px dotted #CCCCCC; padding: 3px; }
+		div#portfolio dd p span{ font-weight: bold; padding-right: .4em;}
+		div#portfolio dd p a{text-align: right; float: right;}
+		
+		div#about dl{float: left; height: 100%; padding: 2em 8em 2em 0;}
+		div#about dt { font-weight: bold;}
+		div#about dd{ font-family: Verdana, Helvetica, sans-serif;}
+		
+		div#contact form{ padding-top: 2em;}
+		div#contact fieldset{ border: 1px dotted #CCCCCC; padding: 1em; }
+		div#contact fieldset ol{ list-style: none;}
+		div#contact fieldset ol li {padding-bottom: 1em; color: #999999;}
+		div#contact fieldset ol li:hover{ color: #84ADE7; }
+		div#contact fieldset ol li label { float: left; width: 6em; }
+		div#contact fieldset ol li input { width: 20em; border: 1px solid #999999;}		
+		div#contact fieldset ol li input.button{ width: auto; float: right; margin-right: 12.2em; color: #34445B; }
+		div#contact fieldset ol li textarea  { width:20.5em; border: 1px solid #999999; }
+		div#contact fieldset ol li input:hover, div#contact fieldset ol li input:focus,
+		div#contact fieldset ol li textarea:hover, div#contact fieldset ol li textarea:focus { border: 1px solid #84ADE7; }
+		
+	div#footer{ height: 100%; padding-bottom: 1em;}
+	div#footer div{ float: left; padding-right: 2em; padding-bottom: 2em;}
+	div#footer a{ font-weight: normal;}
+	div#footer p{ clear: both; display: block; padding: .6em 0;}
+	div#footer dl{ line-height: 1.6em;}
+	div#footer dt{ padding-top: .6em;}
+	div#footer dd{ font-family: Verdana, Helvetica, sans-serif; font-size: 90%;}
+	

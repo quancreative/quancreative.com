@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** global ***/
+*{ padding: 0; margin: 0;}
+img, fieldset{ border: 0;}
+a{ color: #84ADE7; text-decoration: none; padding-bottom: 1px; border-bottom: 1px dotted #84ADE7; font-weight: bold;}
+a:hover{ color: #34445B; font-weight: bold;}
+
+/* form elements */
+form.login { width: 500px; margin: 0 auto;}
+input { -webkit-border-radius: 5px; -moz-border-radius: 5px; border: 0 none; border-radius: 5px; padding: 7px 14px; }
+legend { padding: 5px; font-size: 20px;}
+.input-wrapper { padding : 5px; }
+.input-wrapper label { display:  block; }
+.input-text { border : 1px solid #CFCFCF;}
+.input-btn { float: left; background: #3d3d3d; color: #fff;}
+
+#tabs-container { display: block; min-height: 31px; background: white; clear: both; margin: 0 0 0 300px;}
+.tab {float: left; margin: 0 0 0 5px; display: block;}
+.tab a { -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border: 1px solid #3d3d3d;
+         padding: 7px 14px; display: block; background: #CFCFCF; color: white;
+       }
+.tab a.active{ border-bottom: 0px;}
+
+.clearfix { clear: both;}
+
+body{ font-size: 80%; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal; color: #333333;	}
+
+#header { }
+     #top-nav {float:  right; margin: 0 70px 0 0; padding: 7px 0;}
+     #top-nav li { float:  left; display:  block; margin: 0 0 0 5px;}
+     #top-nav a { display: block; padding: 7px 14px; }
+     #top-nav p { display: block; padding:  7px 14px;}
+
+#main-content{ padding: 20px; background: #EAEAEA;}
+     
+     #center-content {}
+     .portfolio-piece-edit { display : block; clear: both; padding: 10px; border-bottom:  1px solid #CFCFCF;}
+     .portfolio-piece-edit .input-text { width: 450px;}
+     .portfolio-piece-edit .portfolio-piece-img { float: left; width: 320px;}
+     .portfolio-piece-edit .portfolio-piece-img .input-text { width: 250px;}
+     .portfolio-piece-edit .portfolio-piece-content { float: left; width: 650px; display:  block;}
+     .portfolio-piece-new .input-text { width: 600px;}
+
+#footer { height: 100px; display: block; clear: both;}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<works bkgd="images/bkgd.png">
+	<interactive image="images/moonrise.jpg"		link="www.reservations-page.net/c00249/h01257/"	name="Moonrise Hotel"	role="Development"	technology="Flash / Actionscript 3.0 / XML / CSS / XHTML / Javascript / jQuery" />
+	<interactive image="images/pushandtrain.jpg"	link="www.pushandtrain.com"	name="Push and Train"	role="Design / Development"	technology="Flash / Actionscript 2.0" />
+	<interactive image="images/ambassador_hotel.jpg" link="www.ambassadormilwaukee.com" name="Ambassador Hotel Milwaukee" role="Development" technology="Flash / Actionscript 2.0 / XML / CSS / XHTML" />				
+	<interactive image="images/fredny.jpg" 			link="www.fredny.com" 		name="Fred" 			role="Development"			technology="Flash / Actionscript 2.0 / XML" />
+</works>

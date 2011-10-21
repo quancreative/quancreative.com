@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family: "FranklinGothicBook"; 		src: url("font/FranklinGothicBook.swf");}
+@font-face {font-family: "FranklinGothicMedium"; 	src: url("font/FranklinGothicMedium.swf");}
+@font-face {font-family: "FranklinGothicHeavy";		src: url("font/FranklinGothicHeavy.swf");}
+
+body {font-family: FranklinGothicBook; font-size: 16px;}
+dpoint {font-family: FranklinGothicBook; font-size:16px; text-align:center;}
+.bold{font-family: FranklinGothicMedium; }

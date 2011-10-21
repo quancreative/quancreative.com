@@ -1,0 +1,17 @@
+/* CSS Document */
+
+h1{
+	font-size: 26px;
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid #ff0000;
+}
+p{
+	font-size: 18px;
+	color: #ffffff;	
+	font-family: Helvetica, Arial, sans-serif;
+}
+body{
+	color: #ff00ff;
+}
+
