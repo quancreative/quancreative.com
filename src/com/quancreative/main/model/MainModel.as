@@ -1,5 +1,7 @@
 package com.quancreative.main.model 
 {
+	import com.quancreative.core.SiteSWFAddress;
+
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
@@ -42,7 +44,6 @@ package com.quancreative.main.model
 		public function gotoPage(pg : Object) : void 
 		{
 			_currentPageData = pages[pg];
-			
 			dispatchEvent(new Event(Event.CHANGE));
 		}
 		
@@ -78,7 +79,18 @@ package com.quancreative.main.model
 			_portfolioXML	= new XML(xml.pages.page.(@id == "portfolio"));
 			_homeXML 		= new XML(xml.pages.page.(@id == "home"));
 			
+			SiteSWFAddress.instance.addEventListener(SiteSWFAddress.SWFADDRESS_CHANGE, swfAddressChange);
+			
 			dispatchEvent(new Event(Event.COMPLETE));
+		}
+		
+		private function swfAddressChange(event : Event = null):void
+		{
+//			Debug.log('SiteSWFAddress.getValue(): ' + (SiteSWFAddress.getValue()));
+			if (!SiteSWFAddress.getValue())
+				gotoPage(0); // home page
+			else
+				gotoPage(SiteSWFAddress.getValue());
 		}
 		
 		//public function get pages() : Vector.<PageData> { return _pages; }
@@ -90,14 +102,13 @@ package com.quancreative.main.model
 		
 		public function get globalAssetsList() : XMLList { return _globalAssetsList; }
 		
-		public function get portfolioXML() : XML { return _portfolioXML; }
-		
 		public function get homeXML() : XML  { return _homeXML; }
 
 		public function preloadComplete() : void 
 		{
-			state = "pageFlipping"; 
-			gotoPage(pendingPage);
+			state = "pageFlipping";
+			 
+			SiteSWFAddress.gotoPage('home');
 		}
 
 		public function preload() : void 

@@ -6,10 +6,10 @@ package com.quancreative.main.views
 	import com.quancreative.main.controller.MainController;
 	import com.quancreative.main.model.MainModel;
 	import com.quancreative.main.model.PageData;
+	import com.quancreative.main.pages.ExtraPage;
 	import com.quancreative.main.pages.PortfolioPage;
 	import com.quancreative.pages.about.AboutPage;
 	import com.quancreative.pages.contact.ContactPage;
-	import com.quancreative.pages.extra.ExtraPage;
 	import com.quancreative.pages.home.HomePage;
 	import com.quancreative.templates.AbstractPage;
 
@@ -37,13 +37,12 @@ package com.quancreative.main.views
 		private function onAddedToStage(event : Event = null) : void 
 		{
 			if (event) stage.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-			
-			SiteSWFAddress.birth(stage.loaderInfo.parameters.branch);
-			SiteSWFAddress.instance.addEventListener(SiteSWFAddress.SWFADDRESS_CHANGE, swfAddressChange);
 		}
 
 		override public function update(event : Event = null) : void
 		{
+			trace("page changing" , this);
+			
 			switch ((model as MainModel).state)
 			{
 				case "pageFlipping" :
@@ -105,16 +104,6 @@ package com.quancreative.main.views
 				addChild(page);
 				pages[pageData.id] = page;
 			}
-		}
-		
-		private function swfAddressChange(event : Event = null):void
-		{
-//			Debug.log('SiteSWFAddress.getValue(): ' + (SiteSWFAddress.getValue()));
-			
-			if (!SiteSWFAddress.getValue())
-				(controller as MainController).gotoPage(0); // home page
-			else
-				(controller as MainController).gotoPage(SiteSWFAddress.getValue());
 		}
 	}
 }

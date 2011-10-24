@@ -1,6 +1,5 @@
 package com.quancreative.main.views 
 {
-	import flash.utils.setTimeout;
 	import br.com.stimuli.loading.BulkLoader;
 
 	import qhn.mvc.view.ComponentView;
@@ -9,6 +8,7 @@ package com.quancreative.main.views
 	import com.greensock.TweenLite;
 	import com.greensock.easing.Quart;
 	import com.quancreative.core.Nav;
+	import com.quancreative.core.SiteSWFAddress;
 	import com.quancreative.main.controller.MainController;
 	import com.quancreative.main.model.MainModel;
 	import com.quancreative.main.model.PageData;
@@ -18,6 +18,7 @@ package com.quancreative.main.views
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.utils.setTimeout;
 
 	/**
 	 * @author qngo
@@ -89,7 +90,8 @@ package com.quancreative.main.views
 
 		private function onLogoClick(event : MouseEvent) : void 
 		{
-			(controller as MainController).gotoPage(0);
+			SiteSWFAddress.gotoPage('home');
+//			(controller as MainController).gotoPage(0);
 		}
 
 		private function onAddedToStage(event : Event = null) : void 
@@ -160,7 +162,8 @@ package com.quancreative.main.views
 			myNav.activate();
 			myNav.removeEventListener(MouseEvent.CLICK, onNavClick);
 			
-			(controller as MainController).gotoPage(myNav.id);
+//			(controller as MainController).gotoPage(myNav.id);
+			SiteSWFAddress.gotoPage(myNav.id);
 		}
 
 		override public function update(event : Event = null) : void

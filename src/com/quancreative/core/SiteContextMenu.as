@@ -66,7 +66,7 @@
 
 		private static function onLogoItemSelect(event : ContextMenuEvent) : void 
 		{
-			controller.gotoPage(0); // 0 = home page
+			SiteSWFAddress.gotoPage('');
 		}
 
 		private static function onModelChange(event : Event) : void 
@@ -109,7 +109,8 @@
 		{
 			//trace(ContextMenuItem(event.target).caption);
 			var page : String = ContextMenuItem(event.target).caption;
-			controller.gotoPage(page.toLowerCase());
+			
+			SiteSWFAddress.gotoPage(page.toLowerCase());
 		}
 	
 		private static function emailItemSelectHandler(event : ContextMenu):void{

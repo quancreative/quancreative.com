@@ -79,7 +79,7 @@ package com.quancreative.pages.home.view
 			alpha = 1;
 			
 			messageText.visible = true;
-			Typewriter.forward(messageText, 20, {delay : .5, onComplete : typerCompleted});
+			Typewriter.forward(messageText, 20, {onComplete : typerCompleted});
 		}
 		
 		public function transitionOut() : void

@@ -14,9 +14,10 @@ package com.quancreative.main.controller
 			model = m;	
 		}
 		
-		public function gotoPage(pg : Object) : void
-		{
-			model.gotoPage(pg);
+		// Use SiteSWFAddress for changing page.
+//		public function gotoPage(pg : Object) : void
+//		{
+//			model.gotoPage(pg);
 //			
 //			if (isNaN(Number(pg)))
 //			{
@@ -33,7 +34,7 @@ package com.quancreative.main.controller
 //					model.gotoPage(page);
 //				}
 //			}
-		}
+//		}
 
 		public function preloadComplete() : void 
 		{

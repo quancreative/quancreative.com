@@ -9,7 +9,9 @@ package com.quancreative.model
 		private var _isStandAlone : Boolean = true;
 		
 		public var contactEmailAddress : String = "info@quancreative.com";
-		
+		private var _appPath 	: String = "";
+		private var _swfPath 	: String = "";
+
 		public function AppModel(pvt : PrivateClass)
 		{
 			
@@ -24,6 +26,16 @@ package com.quancreative.model
 			return AppModel.instance;
 		}
 		
+		public function get swfPath() : String
+		{
+			return _swfPath;
+		}
+		
+		public function set swfPath(value : String) : void
+		{
+			_swfPath = value;
+		}
+		
 		public function get isStandAlone() : Boolean
 		{
 			return _isStandAlone;
@@ -32,6 +44,11 @@ package com.quancreative.model
 		public function set isStandAlone(value : Boolean) : void
 		{
 			_isStandAlone = value;
+			
+			if (!_isStandAlone)
+			{
+				_swfPath = "assets/swf/";
+			}
 		}
 	}
 }

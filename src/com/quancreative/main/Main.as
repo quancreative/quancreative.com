@@ -10,12 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 package com.quancreative.main
 {
-	import com.quancreative.model.AppModel;
 	import com.quancreative.core.SiteContextMenu;
+	import com.quancreative.core.SiteSWFAddress;
 	import com.quancreative.main.controller.MainController;
 	import com.quancreative.main.model.MainModel;
 	import com.quancreative.main.model.PageData;
 	import com.quancreative.main.views.MainView;
+	import com.quancreative.model.AppModel;
 
 	import flash.display.MovieClip;
 	import flash.display.StageAlign;
@@ -48,6 +49,8 @@ package com.quancreative.main
 		private function onAddedToStage(event : Event = null) : void 
 		{
 			if(event) removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+			
+			SiteSWFAddress.birth(stage.loaderInfo.parameters.branch);
 			
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align     = StageAlign.TOP_LEFT;

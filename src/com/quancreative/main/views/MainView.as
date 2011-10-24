@@ -28,7 +28,7 @@ package com.quancreative.main.views
 		}
 
 		override public function update(event : Event = null) : void
-		{	
+		{
 			switch ((model as MainModel).state)
 			{
 				case "pageFlipping" :
