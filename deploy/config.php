@@ -48,7 +48,7 @@
 	define("DIR_S", '/');
 	
 	// Application Directory - need to change this to your app folder.
-	define('APP_ROOT', 'quancreative/deploy');
+	define('APP_ROOT', 'quancreative/quancreative.com/deploy');
 	
 	// Address of website.
 	define('WEBSITE', 'http://localhost/');

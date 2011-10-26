@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteBase /quancreative/deploy/
+	RewriteBase /quancreative/quancreative.com/deploy/
 	RewriteRule !(\.swf|\.xml|\.gif|\.png|\.jpe?g|\.css|\.js|\.php|^public/.*)$ admin.php [nocase,last]
 	
 </IfModule>
